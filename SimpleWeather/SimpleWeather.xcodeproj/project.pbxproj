@@ -14,6 +14,8 @@
 		18679D772A4D86C50084B931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18679D762A4D86C50084B931 /* Assets.xcassets */; };
 		18679D7A2A4D86C50084B931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18679D782A4D86C50084B931 /* LaunchScreen.storyboard */; };
 		18679D822A4D871E0084B931 /* gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 18679D812A4D871E0084B931 /* gitignore */; };
+		1891B0152A4E675F00D50ED2 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891B0142A4E675F00D50ED2 /* NetworkingManager.swift */; };
+		1891B0182A4E733E00D50ED2 /* WeatherResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1891B0172A4E733E00D50ED2 /* WeatherResults.swift */; };
 		C40C2F23C8FFD967066CF351 /* Pods_SimpleWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB835ADDCF6CC677FA286892 /* Pods_SimpleWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		18679D792A4D86C50084B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18679D7B2A4D86C50084B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18679D812A4D871E0084B931 /* gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = gitignore; sourceTree = "<group>"; };
+		1891B0142A4E675F00D50ED2 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		1891B0172A4E733E00D50ED2 /* WeatherResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResults.swift; sourceTree = "<group>"; };
 		404DBE05AB5098D21ACCF807 /* Pods-SimpleWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleWeather.debug.xcconfig"; path = "Target Support Files/Pods-SimpleWeather/Pods-SimpleWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		AB835ADDCF6CC677FA286892 /* Pods_SimpleWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,6 +72,9 @@
 			children = (
 				18679D6D2A4D86C40084B931 /* AppDelegate.swift */,
 				18679D6F2A4D86C40084B931 /* SceneDelegate.swift */,
+				1891B0162A4E72C200D50ED2 /* Model */,
+				1891B0192A4E84D000D50ED2 /* ViewModel */,
+				1891B0132A4E673A00D50ED2 /* Service */,
 				18679D712A4D86C40084B931 /* ViewController.swift */,
 				18679D732A4D86C40084B931 /* Main.storyboard */,
 				18679D762A4D86C50084B931 /* Assets.xcassets */,
@@ -77,13 +84,35 @@
 			path = SimpleWeather;
 			sourceTree = "<group>";
 		};
+		1891B0132A4E673A00D50ED2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1891B0142A4E675F00D50ED2 /* NetworkingManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1891B0162A4E72C200D50ED2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1891B0172A4E733E00D50ED2 /* WeatherResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1891B0192A4E84D000D50ED2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4E1EFF957AE88B3A497382E3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				404DBE05AB5098D21ACCF807 /* Pods-SimpleWeather.debug.xcconfig */,
 				0991FA3FF444FB606DFBB495 /* Pods-SimpleWeather.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,7 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1891B0182A4E733E00D50ED2 /* WeatherResults.swift in Sources */,
 				18679D722A4D86C40084B931 /* ViewController.swift in Sources */,
+				1891B0152A4E675F00D50ED2 /* NetworkingManager.swift in Sources */,
 				18679D6E2A4D86C40084B931 /* AppDelegate.swift in Sources */,
 				18679D702A4D86C40084B931 /* SceneDelegate.swift in Sources */,
 			);
@@ -367,6 +398,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,6 +429,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (

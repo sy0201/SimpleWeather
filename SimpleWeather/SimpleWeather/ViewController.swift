@@ -11,9 +11,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        NetworkingManager.shared.requestWeather(baseDate: "20230630", nx: "55", ny: "127") {
+        }
     }
-
-
 }
-

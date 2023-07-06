@@ -7,13 +7,13 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - WeatherResults
 struct WeatherResults: Codable {
-    let response: WeatherResponse
+    let response: Response
 }
 
 // MARK: - Response
-struct WeatherResponse: Codable {
+struct Response: Codable {
     let header: Header
     let body: Body
 }
@@ -41,5 +41,3 @@ struct Item: Codable {
 struct Header: Codable {
     let resultCode, resultMsg: String
 }
-
-
